@@ -9,4 +9,5 @@ file(GLOB_RECURSE SOURCE_FILES
 
 include_directories(include)
 
-add_executable(CS10 ${SOURCE_FILES})
+add_executable(A1.1 src/a1_1.cpp)
+add_executable(A1.2 src/a1_2.cpp)
