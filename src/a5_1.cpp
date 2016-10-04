@@ -41,3 +41,40 @@ int main() {
 
     return 0;
 }
+// Output
+/*
+How many numbers will be entered? 8
+Enter num: 5
+Enter num: 7
+Enter num: 6
+Enter num: 7
+Enter num: 7
+Enter num: 3
+Enter num: 8
+Enter num: 6
+The first 7 was in position 2
+The last 7 was in position 5
+
+How many numbers will be entered? 8
+Enter num: 5
+Enter num: 2
+Enter num: 6
+Enter num: 7
+Enter num: 1
+Enter num: 3
+Enter num: 8
+Enter num: 6
+The first 7 was in position 4
+The last 7 was in position 4
+
+How many numbers will be entered? 8
+Enter num: 5
+Enter num: 1
+Enter num: 6
+Enter num: 5
+Enter num: 9
+Enter num: 3
+Enter num: 8
+Enter num: 6
+Sorry, no 7's were entered.
+*/

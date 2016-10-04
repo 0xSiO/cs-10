@@ -26,3 +26,4 @@ add_executable(A4.2 src/a4_2.cpp)
 add_executable(A4.3 src/a4_3.cpp)
 
 add_executable(A5.1 src/a5_1.cpp)
+add_executable(A5.2 src/a5_2.cpp)
