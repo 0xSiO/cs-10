@@ -1,7 +1,7 @@
 /*
  * Lucas Street, 09/13
  * CS 10, Dave Harden
- * Assignment  - a4_3.cpp
+ * Assignment 4.3 - a4_3.cpp
  *
  * Tracks ages and food preferences of attendees at a movie theater. Displays average, max, and minimum ages along
  * with counts of age ranges and concession preferences.
