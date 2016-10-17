@@ -10,3 +10,5 @@ file(GLOB_RECURSE SOURCE_FILES
 include_directories(include)
 
 add_executable(A6.1 src/a6_1.cpp)
+
+add_executable(A7.1 src/a7_1.cpp)
