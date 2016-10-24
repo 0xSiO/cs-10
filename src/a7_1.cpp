@@ -6,7 +6,7 @@
  *
  * Performs three sets of five arithmetic problems, each using a different operator. Each
  * problem uses randomly generated operands between 0 and 100 and allows the user to input
- * a guess for the correct answer to each problem . The user's guess is then compared to
+ * a guess for the correct answer to each problem. The user's guess is then compared to
  * the correct answer and the result is printed to the screen. This program makes use of
  * variables passed by reference, such as when generating the two operands, as well as in
  * calculating the correct answer to each problem. Currently the only operations available
@@ -19,14 +19,14 @@
 
 void doOneSet(char operation);
 
-void doOneProblem(char operation);
+void doOneProblem(char operation, int max_number, int current_correct);
 
-void generateOperands(int &first_operand, int &second_operand);
+void generateOperands(int first_operand, int second_operand, int max_number);
 
 void calculateCorrectAnswer(int first_operand, int second_operand, int &answer,
                             char operation);
 
-void checkAnswer(int correct_answer, int answer);
+void checkAnswer(int correct_answer, int answer, int &current_correct);
 
 using namespace std;
 
@@ -63,7 +63,7 @@ int main() {
  */
 void doOneSet(char operation) {
     for (int i = 0; i < PROBLEMS_PER_SET; i++) {
-        doOneProblem(operation);
+        doOneProblem(operation, 0, 0);
     }
 }
 
@@ -80,16 +80,16 @@ void doOneSet(char operation) {
  *
  * @param operation the operation to perform on the generated operands
  */
-void doOneProblem(char operation) {
+void doOneProblem(char operation, int i, int i) {
     int first_operand, second_operand, correct_answer;
-    generateOperands(first_operand, second_operand);
+    generateOperands(first_operand, second_operand, 0);
     calculateCorrectAnswer(first_operand, second_operand, correct_answer, operation);
 
     int answer;
     cout << first_operand << " " << operation << " " << second_operand << " = ";
     cin >> answer;
 
-    checkAnswer(correct_answer, answer);
+    checkAnswer(correct_answer, answer, <#initializer#>);
 }
 
 
@@ -104,7 +104,7 @@ void doOneProblem(char operation) {
  * @param first_operand the first operand to use in the problem
  * @param second_operand the second operand to use in the problem
  */
-void generateOperands(int &first_operand, int &second_operand) {
+void generateOperands(int first_operand, int second_operand, int i) {
     first_operand = rand() % 101; // will turn 101 into variable on next assignment
     second_operand = rand() % 101;
 }
@@ -155,7 +155,7 @@ void calculateCorrectAnswer(int first_operand, int second_operand, int &correct_
  * @param correct_answer the correct answer
  * @param answer the user-provided answer
  */
-void checkAnswer(int correct_answer, int answer) {
+void checkAnswer(int correct_answer, int answer, int &i) {
     if (answer == correct_answer) {
         cout << "correct" << endl;
     } else {
