@@ -3,8 +3,6 @@
  * @date 10/29/16
  * CS 10, Dave Harden
  * Assignment 9.1 - a9_1.cpp
- *
- * TODO: Documentation
  */
 
 #include <iostream>
