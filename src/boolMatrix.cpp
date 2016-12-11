@@ -150,7 +150,7 @@ void boolMatrix::print() const {
     // Top row column numbers
     cout << setw(left_pad) << " ";
     for (int col_number = 0; col_number < NUM_COLS; ++col_number) {
-        cout << col_number;
+        cout << col_number % 10;
     }
     cout << endl;
 
@@ -167,19 +167,18 @@ void boolMatrix::print() const {
 
 
 /**
- * Print out a particular row of the matrix, with correct padding depending on the value
- * True values are shown as '*' and false value are shown as ' '
+ * Print out a particular row of the matrix. True values are shown as '*' and false value
+ * are shown as ' '
  *
  * @param row_number the index of the row to print
  */
 void boolMatrix::printRow(const int &row_number) const {
     assert(row_number >= 0 && row_number < NUM_ROWS);
     for (int column = 0; column < NUM_COLS; ++column) {
-        int value_padding = static_cast<int>(log10(static_cast<long double>(column))) + 1;
         if (get(row_number, column)) {
-            cout << setw(value_padding) << "*";
+            cout << "*";
         } else {
-            cout << setw(value_padding) << " ";
+            cout << " ";
         }
     }
     cout << endl;
