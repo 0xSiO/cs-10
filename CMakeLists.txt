@@ -22,3 +22,5 @@ add_executable(A12.1 src/a12_1.cpp)
 add_executable(A13.1 src/a13_1.cpp src/fraction.cpp)
 
 add_executable(A14.1 src/a14_1.cpp src/boolMatrix.cpp)
+
+add_executable(A15 src/a15.cpp src/boolMatrix.cpp)
